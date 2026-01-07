@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سياسة الخصوصية - تطبيق ShopyNote</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-dark: #2D5016; /* أخضر داكن جداً - لون ورقة الشجرة الغامقة */
+            --primary-color: #3A6B1F; /* أخضر داكن */
+            --primary-light: #558B2F; /* أخضر متوسط */
+            --accent-color: #689F38; /* أخضر فاتح */
+            --secondary-color: #F8F9F7;
+            --text-color: #2C3E2F;
+            --text-light: #4A5F45;
+            --border-color: #DDE5D8;
+            --shadow: 0 4px 12px rgba(45, 80, 22, 0.08);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #F9FCF8 0%, #F2F5F0 100%);
+            color: var(--text-color);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(45, 80, 22, 0.2);
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        .logo-icon {
+            font-size: 2.5rem;
+            margin-left: 10px;
+        }
+
+        .app-name {
+            font-size: 2.2rem;
+            font-weight: 700;
+        }
+
+        .tagline {
+            font-size: 1.1rem;
+            opacity: 0.95;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Main Content */
+        .privacy-content {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            padding: 2rem;
+            margin: 2rem auto;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+
+        .privacy-content::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary-light), var(--primary-color));
+        }
+
+        .last-updated {
+            background-color: #F1F7ED;
+            padding: 12px 20px;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            border-right: 4px solid var(--primary-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.95rem;
+            color: var(--primary-dark);
+        }
+
+        .last-updated i {
+            color: var(--primary-color);
+            margin-left: 8px;
+        }
+
+        .section-title {
+            color: var(--primary-dark);
+            margin: 1.5rem 0 1rem;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            font-size: 1.3rem;
+        }
+
+        .section-title i {
+            margin-left: 10px;
+            color: var(--primary-color);
+        }
+
+        .section-content {
+            margin-bottom: 1.5rem;
+            padding-right: 5px;
+        }
+
+        .section-content p {
+            margin-bottom: 1rem;
+            color: var(--text-light);
+            font-size: 1rem;
+        }
+
+        .data-list {
+            list-style-type: none;
+            margin: 1rem 0;
+        }
+
+        .data-list li {
+            padding: 10px 12px;
+            margin-bottom: 8px;
+            background-color: #FAFDF8;
+            border-radius: 6px;
+            border-right: 3px solid var(--primary-light);
+            transition: var(--transition);
+        }
+
+        .data-list li:hover {
+            background-color: #F0F7E9;
+        }
+
+        .data-list i {
+            color: var(--primary-color);
+            margin-left: 8px;
+            font-size: 0.9rem;
+        }
+
+        .app-purpose {
+            background-color: #F1F7ED;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border: 1px solid #D4E6C5;
+            text-align: center;
+        }
+
+        .app-purpose h3 {
+            color: var(--primary-dark);
+            margin-bottom: 10px;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 1.5rem 0;
+        }
+
+        .feature-item {
+            background-color: white;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            border-top: 3px solid var(--primary-color);
+            transition: var(--transition);
+        }
+
+        .feature-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(58, 107, 31, 0.1);
+        }
+
+        .feature-icon {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-dark);
+            color: white;
+            padding: 2rem 0;
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 1rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin: 5px 10px;
+        }
+
+        .contact-item i {
+            color: var(--primary-light);
+            margin-left: 6px;
+        }
+
+        .copyright {
+            margin-top: 1.5rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            width: 100%;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .privacy-content {
+                padding: 1.5rem;
+            }
+            
+            .app-name {
+                font-size: 1.8rem;
+            }
+            
+            .features {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <i class="fas fa-shopping-bag logo-icon"></i>
+                <h1 class="app-name">ShopyNote</h1>
+            </div>
+            <p class="tagline">تطبيق ذكي لتجميع واختيار أفضل المنتجات أثناء التسوق</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="privacy-content">
+            <div class="last-updated">
+                <i class="fas fa-calendar-alt"></i>
+                <span>آخر تحديث: سبتمبر 2023</span>
+            </div>
+            
+            <div class="app-purpose">
+                <h3>ما هو تطبيق ShopyNote؟</h3>
+                <p>تطبيق يساعدك في البحث عن المنتجات في السوق، تجميعها في قائمة واحدة، واختيار الخيار الأنسب بناءً على المواصفات والسعر.</p>
+            </div>
+            
+            <div class="features">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h4>بحث سريع</h4>
+                    <p>ابحث عن أي منتج تريده في السوق</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-list"></i>
+                    </div>
+                    <h4>تجميع المنتجات</h4>
+                    <p>اجمع المنتجات في قائمة موحدة داخل تطبيقك</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <h4>اختيار الأفضل</h4>
+                    <p>اختر المنتج الأنسب من القائمة بعد المقارنة</p>
+                </div>
+            </div>
+            
+            <h2 class="section-title">
+                <i class="fas fa-info-circle"></i>
+                معلومات نجمعها
+            </h2>
+            
+            <div class="section-content">
+                <p>لتحسين تجربتك في التطبيق، نجمع الأنواع التالية من المعلومات:</p>
+                
+                <ul class="data-list">
+                    <li><i class="fas fa-user"></i> <strong>معلومات حسابك:</strong> عند إنشاء حساب جديد</li>
+                    <li><i class="fas fa-shopping-cart"></i> <strong>قوائم التسوق:</strong> المنتجات التي تضيفها إلى قوائمك</li>
+                    <li><i class="fas fa-star"></i> <strong>التفضيلات:</strong> المنتجات التي تحددها كأفضل اختيار</li>
+                </ul>
+            </div>
+            
+            <h2 class="section-title">
+                <i class="fas fa-shield-alt"></i>
+                كيف نحمي معلوماتك
+            </h2>
+            
+            <div class="section-content">
+                <p>نستخدم إجراءات أمنية لحماية معلوماتك. لا نبيع أو نشارك معلوماتك الشخصية مع أطراف ثالثة لأغراض تسويقية.</p>
+            </div>
+            
+            <h2 class="section-title">
+                <i class="fas fa-cog"></i>
+                كيفية استخدام المعلومات
+            </h2>
+            
+            <div class="section-content">
+                <p>نستخدم المعلومات التي نجمعها ل:</p>
+                <ul class="data-list">
+                    <li><i class="fas fa-bullseye"></i> تخصيص تجربة التسوق لك</li>
+                    <li><i class="fas fa-chart-line"></i> تحسين أداء التطبيق</li>
+                    <li><i class="fas fa-bell"></i> إرسال تحديثات مفيدة لك</li>
+                </ul>
+            </div>
+            
+            <h2 class="section-title">
+                <i class="fas fa-user-check"></i>
+                حقوقك
+            </h2>
+            
+            <div class="section-content">
+                <p>يمكنك في أي وقت:</p>
+                <ul class="data-list">
+                    <li><i class="fas fa-eye"></i> الاطلاع على معلوماتك</li>
+                    <li><i class="fas fa-edit"></i> تعديل البيانات غير الدقيقة</li>
+                    <li><i class="fas fa-trash"></i> حذف حسابك</li>
+                </ul>
+            </div>
+            
+            <h2 class="section-title">
+                <i class="fas fa-question-circle"></i>
+                أسئلة شائعة
+            </h2>
+            
+            <div class="section-content">
+                <p><strong>هل يتم مشاركة بياناتي مع متاجر أخرى؟</strong><br>
+                لا، بياناتك تبقى داخل التطبيق ولا نشاركها مع متاجر أو أطراف ثالثة.</p>
+                
+                <p><strong>كيف يمكنني حذف حسابي؟</strong><br>
+                يمكنك حذف حسابك من إعدادات التطبيق، أو التواصل معنا عبر البريد الإلكتروني.</p>
+                
+                <p><strong>هل التطبيق آمن للاستخدام؟</strong><br>
+                نعم، نستخدم إجراءات أمنية متقدمة لحماية بياناتك وخصوصيتك.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <h3 style="margin-bottom: 1rem;">ShopyNote</h3>
+                <p>تطبيق ذكي لتجميع واختيار أفضل المنتجات أثناء التسوق</p>
+                
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>privacy@shopynote.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-globe"></i>
+                        <span>www.shopynote.com</span>
+                    </div>
+                </div>
+                
+                <div class="copyright">
+                    <p>© 2023 ShopyNote. جميع الحقوق محفوظة.</p>
+                    <p>قد يتم تحديث سياسة الخصوصية بين الحين والآخر.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
